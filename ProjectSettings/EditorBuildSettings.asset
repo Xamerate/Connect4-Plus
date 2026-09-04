@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/WearOS/Menu Wear.unity
+    guid: 6a24d90a84e8407429f5effab6f37bf9
+  - enabled: 1
+    path: Assets/Scenes/WearOS/Game Wear.unity
+    guid: eee2445534df5784895f016af2aa70a6
+  - enabled: 1
+    path: Assets/Scenes/WearOS/GameSelect Wear.unity
+    guid: e377e97e34505984f98006af578225e0
   m_configObjects: {}

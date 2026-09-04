@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Darkness : MonoBehaviour
 {
+    bool WearOS = true;
+
     [SerializeField] private float fadeDuration = 1f;
 
     public MenuB buttons;
@@ -63,7 +65,14 @@ public class Darkness : MonoBehaviour
         if (buttons.STATE == 1)
         {
             buttons.STATE = 0;
-            SceneManager.LoadScene("Scenes/GameSelect");
+            if (!WearOS)
+            {
+                SceneManager.LoadScene("Scenes/GameSelect");
+            }
+            else
+            {
+                SceneManager.LoadScene("Scenes/WearOS/GameSelect Wear");
+            }
         }
         if (buttons.STATE == 2)
         {
@@ -74,12 +83,26 @@ public class Darkness : MonoBehaviour
         {
             buttons.STATE = 0;
             fadeDuration = 1f;
-            SceneManager.LoadScene("Scenes/Game");
+            if (!WearOS)
+            {
+                SceneManager.LoadScene("Scenes/Game");
+            }
+            else
+            {
+                SceneManager.LoadScene("Scenes/WearOS/Game Wear");
+            }
         }
         if (buttons.STATE == 4)
         {
             buttons.STATE = 0;
-            SceneManager.LoadScene("Scenes/Menu");
+            if (!WearOS)
+            {
+                SceneManager.LoadScene("Scenes/Menu");
+            }
+            else
+            {
+                SceneManager.LoadScene("Scenes/WearOS/Menu Wear");
+            }
         }
     }
 }
